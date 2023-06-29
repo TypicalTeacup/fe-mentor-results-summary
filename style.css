@@ -1,0 +1,216 @@
+/* font */
+@font-face {
+    font-family: "Hanken Grotesk";
+    src: url("HankenGrotesk.ttf");
+}
+
+:root {
+    --border-radius: 32px;
+}
+
+* {
+    font-family: "Hanken Grotesk";
+    color: hsl(224, 30%, 27%);
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+html,
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: 5px 5px 25px -3px hsla(241, 100%, 89%, 0.5);
+    width: 735px;
+    height: 500px;
+}
+
+aside,
+section {
+    width: 100%;
+    height: 100%;
+    padding: 45px;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(
+        180deg,
+        hsl(252, 100%, 67%),
+        hsl(241, 81%, 54%)
+    );
+    border-radius: var(--border-radius);
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 1.3em;
+    margin-top: 0;
+}
+
+aside > h3,
+aside > p {
+    text-align: center;
+    color: hsl(241, 100%, 89%);
+    padding: 0 16px;
+}
+
+.circle {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: clamp(150px,30vw,200px);
+    background-image: linear-gradient(
+        hsla(256, 72%, 46%, 1),
+        hsla(241, 72%, 46%, 0)
+    );
+    aspect-ratio: 1;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 3.7em;
+    margin: 0;
+    color: hsl(0, 0%, 100%);
+}
+
+.circle > span {
+    font-weight: 700;
+    color: hsla(241, 100%, 89%, 0.5);
+}
+
+aside > h2 {
+    font-weight: 700;
+    font-size: 1.75em;
+
+    margin-bottom: 0;
+    color: hsl(0, 0%, 100%);
+}
+
+#reaction {
+    margin-top: 8px;
+    --color: hsl(0, 100%, 67%);
+    --background: hsla(0, 100%, 67%, 0.1);
+}
+
+#memory {
+    --color: hsl(39, 100%, 56%);
+    --background: hsla(39, 100%, 56%, 0.1);
+}
+
+#verbal {
+    --color: hsl(166, 100%, 37%);
+    --background: hsla(166, 100%, 37%, 0.1);
+}
+
+#visual {
+    --color: hsl(234, 85%, 45%);
+    --background: hsla(234, 85%, 45%, 0.1);
+}
+
+figure {
+    background: var(--background);
+
+    width: 100%;
+    margin: 0;
+    margin-bottom: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+figure > div {
+    font-weight: 700;
+    color: hsla(224, 30%, 27%, 0.5);
+}
+
+figure > div > span {
+    font-weight: 800;
+    margin-right: 4px;
+}
+
+figcaption > img {
+    padding-right: 8px;
+}
+
+figcaption {
+    display: flex;
+    color: var(--color);
+}
+
+button {
+    width: 100%;
+    border: none;
+    background-color: hsl(224, 30%, 27%);
+    color: hsl(0, 0%, 100%);
+    margin-top: 24px;
+    padding: 16px;
+    border-radius: 50px;
+}
+
+button:active {
+    background-image: linear-gradient(
+        180deg,
+        hsl(252, 100%, 67%),
+        hsl(241, 81%, 54%)
+    );
+}
+
+@media (max-width: 500px) {
+    main {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    main > * {
+        padding: 16px 24px;
+    }
+    
+    h1 {
+        font-size: 3.2em;
+    }
+
+    h3 {
+        margin: 8px;
+        font-size: 1em;
+    }
+
+    p {
+        margin: 0;
+        padding-top: 0;
+    }
+
+    aside {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+
+    section {
+        height: 200%;
+    }
+
+    #visual {
+        margin: 0;
+    }
+}
