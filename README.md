@@ -14,6 +14,8 @@ This is a solution to the [Results summary component challenge on Frontend Mento
 
 ## Overview
 
+i was too lazy to calculate the final score with js, but not lazy enough to read data.json
+
 ### Screenshot
 
 ![](./screenshot.png)
